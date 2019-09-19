@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6FE5AD27758EA0202C68E9C1 /* Pods_EZButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A618EF5B8314BF53A20D42 /* Pods_EZButton.framework */; };
+		7B6061AC0F2355476246ED45 /* Pods_EZButtonUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3458AD67F96075FE627F848 /* Pods_EZButtonUITests.framework */; };
 		8CE9A817232EA13400EB767E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE9A816232EA13400EB767E /* AppDelegate.swift */; };
 		8CE9A819232EA13400EB767E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE9A818232EA13400EB767E /* SceneDelegate.swift */; };
 		8CE9A81B232EA13400EB767E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE9A81A232EA13400EB767E /* ViewController.swift */; };
@@ -15,6 +17,9 @@
 		8CE9A823232EA13500EB767E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CE9A821232EA13500EB767E /* LaunchScreen.storyboard */; };
 		8CE9A82E232EA13600EB767E /* EZButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE9A82D232EA13600EB767E /* EZButtonTests.swift */; };
 		8CE9A839232EA13600EB767E /* EZButtonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE9A838232EA13600EB767E /* EZButtonUITests.swift */; };
+		8CE9A847232EA1CF00EB767E /* EZButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE9A846232EA1CF00EB767E /* EZButton.swift */; };
+		8CE9A849232F30AC00EB767E /* String+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE9A848232F30AC00EB767E /* String+Ex.swift */; };
+		E3C09C4D1F6308F24A4E507B /* Pods_EZButtonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCDF9B7BA1D30447A1E675C /* Pods_EZButtonTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		315BB535CFF205E7F22FD9E7 /* Pods-EZButtonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZButtonTests.debug.xcconfig"; path = "Target Support Files/Pods-EZButtonTests/Pods-EZButtonTests.debug.xcconfig"; sourceTree = "<group>"; };
+		54A618EF5B8314BF53A20D42 /* Pods_EZButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DCDF9B7BA1D30447A1E675C /* Pods_EZButtonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZButtonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F95595C2E96A2B2CB64CDB3 /* Pods-EZButtonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZButtonTests.release.xcconfig"; path = "Target Support Files/Pods-EZButtonTests/Pods-EZButtonTests.release.xcconfig"; sourceTree = "<group>"; };
 		8CE9A813232EA13400EB767E /* EZButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CE9A816232EA13400EB767E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CE9A818232EA13400EB767E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +58,13 @@
 		8CE9A834232EA13600EB767E /* EZButtonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EZButtonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CE9A838232EA13600EB767E /* EZButtonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZButtonUITests.swift; sourceTree = "<group>"; };
 		8CE9A83A232EA13600EB767E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CE9A846232EA1CF00EB767E /* EZButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZButton.swift; sourceTree = "<group>"; };
+		8CE9A848232F30AC00EB767E /* String+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ex.swift"; sourceTree = "<group>"; };
+		940DA4C1BFAAED0601529C28 /* Pods-EZButtonUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZButtonUITests.release.xcconfig"; path = "Target Support Files/Pods-EZButtonUITests/Pods-EZButtonUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B867FC13966C75FC9C72C6F6 /* Pods-EZButton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZButton.debug.xcconfig"; path = "Target Support Files/Pods-EZButton/Pods-EZButton.debug.xcconfig"; sourceTree = "<group>"; };
+		DF52D6E0E48EC23175B628E9 /* Pods-EZButton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZButton.release.xcconfig"; path = "Target Support Files/Pods-EZButton/Pods-EZButton.release.xcconfig"; sourceTree = "<group>"; };
+		E7D902F7523622C5BA81548B /* Pods-EZButtonUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZButtonUITests.debug.xcconfig"; path = "Target Support Files/Pods-EZButtonUITests/Pods-EZButtonUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F3458AD67F96075FE627F848 /* Pods_EZButtonUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZButtonUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FE5AD27758EA0202C68E9C1 /* Pods_EZButton.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3C09C4D1F6308F24A4E507B /* Pods_EZButtonTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,19 +88,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B6061AC0F2355476246ED45 /* Pods_EZButtonUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7460305BE23D44E878C62A2E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54A618EF5B8314BF53A20D42 /* Pods_EZButton.framework */,
+				7DCDF9B7BA1D30447A1E675C /* Pods_EZButtonTests.framework */,
+				F3458AD67F96075FE627F848 /* Pods_EZButtonUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8CE9A80A232EA13400EB767E = {
 			isa = PBXGroup;
 			children = (
+				8CE9A848232F30AC00EB767E /* String+Ex.swift */,
 				8CE9A815232EA13400EB767E /* EZButton */,
 				8CE9A82C232EA13600EB767E /* EZButtonTests */,
 				8CE9A837232EA13600EB767E /* EZButtonUITests */,
 				8CE9A814232EA13400EB767E /* Products */,
+				D12A6E67D07E21781A43AE73 /* Pods */,
+				7460305BE23D44E878C62A2E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +134,7 @@
 				8CE9A816232EA13400EB767E /* AppDelegate.swift */,
 				8CE9A818232EA13400EB767E /* SceneDelegate.swift */,
 				8CE9A81A232EA13400EB767E /* ViewController.swift */,
+				8CE9A846232EA1CF00EB767E /* EZButton.swift */,
 				8CE9A81C232EA13400EB767E /* Main.storyboard */,
 				8CE9A81F232EA13500EB767E /* Assets.xcassets */,
 				8CE9A821232EA13500EB767E /* LaunchScreen.storyboard */,
@@ -128,6 +161,19 @@
 			path = EZButtonUITests;
 			sourceTree = "<group>";
 		};
+		D12A6E67D07E21781A43AE73 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B867FC13966C75FC9C72C6F6 /* Pods-EZButton.debug.xcconfig */,
+				DF52D6E0E48EC23175B628E9 /* Pods-EZButton.release.xcconfig */,
+				315BB535CFF205E7F22FD9E7 /* Pods-EZButtonTests.debug.xcconfig */,
+				7F95595C2E96A2B2CB64CDB3 /* Pods-EZButtonTests.release.xcconfig */,
+				E7D902F7523622C5BA81548B /* Pods-EZButtonUITests.debug.xcconfig */,
+				940DA4C1BFAAED0601529C28 /* Pods-EZButtonUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +181,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8CE9A83D232EA13600EB767E /* Build configuration list for PBXNativeTarget "EZButton" */;
 			buildPhases = (
+				5C7357E0DC153BFE35C700E2 /* [CP] Check Pods Manifest.lock */,
 				8CE9A80F232EA13400EB767E /* Sources */,
 				8CE9A810232EA13400EB767E /* Frameworks */,
 				8CE9A811232EA13400EB767E /* Resources */,
+				7ED243E0DD9481AB8BC410A8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +200,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8CE9A840232EA13600EB767E /* Build configuration list for PBXNativeTarget "EZButtonTests" */;
 			buildPhases = (
+				F6389EBF586B9F867887C8E4 /* [CP] Check Pods Manifest.lock */,
 				8CE9A825232EA13600EB767E /* Sources */,
 				8CE9A826232EA13600EB767E /* Frameworks */,
 				8CE9A827232EA13600EB767E /* Resources */,
@@ -170,6 +219,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8CE9A843232EA13600EB767E /* Build configuration list for PBXNativeTarget "EZButtonUITests" */;
 			buildPhases = (
+				739E994F27D7FFD4F46F8086 /* [CP] Check Pods Manifest.lock */,
 				8CE9A830232EA13600EB767E /* Sources */,
 				8CE9A831232EA13600EB767E /* Frameworks */,
 				8CE9A832232EA13600EB767E /* Resources */,
@@ -254,11 +304,99 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5C7357E0DC153BFE35C700E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EZButton-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		739E994F27D7FFD4F46F8086 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EZButtonUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7ED243E0DD9481AB8BC410A8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EZButton/Pods-EZButton-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EZButton/Pods-EZButton-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EZButton/Pods-EZButton-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6389EBF586B9F867887C8E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EZButtonTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8CE9A80F232EA13400EB767E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CE9A847232EA1CF00EB767E /* EZButton.swift in Sources */,
+				8CE9A849232F30AC00EB767E /* String+Ex.swift in Sources */,
 				8CE9A81B232EA13400EB767E /* ViewController.swift in Sources */,
 				8CE9A817232EA13400EB767E /* AppDelegate.swift in Sources */,
 				8CE9A819232EA13400EB767E /* SceneDelegate.swift in Sources */,
@@ -432,6 +570,7 @@
 		};
 		8CE9A83E232EA13600EB767E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B867FC13966C75FC9C72C6F6 /* Pods-EZButton.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -442,13 +581,14 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jemesl.EZButton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		8CE9A83F232EA13600EB767E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF52D6E0E48EC23175B628E9 /* Pods-EZButton.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -459,13 +599,14 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jemesl.EZButton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		8CE9A841232EA13600EB767E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 315BB535CFF205E7F22FD9E7 /* Pods-EZButtonTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +628,7 @@
 		};
 		8CE9A842232EA13600EB767E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F95595C2E96A2B2CB64CDB3 /* Pods-EZButtonTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +650,7 @@
 		};
 		8CE9A844232EA13600EB767E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7D902F7523622C5BA81548B /* Pods-EZButtonUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -527,6 +670,7 @@
 		};
 		8CE9A845232EA13600EB767E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 940DA4C1BFAAED0601529C28 /* Pods-EZButtonUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

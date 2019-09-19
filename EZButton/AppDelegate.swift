@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        loadInjectionIII()
         return true
     }
 
@@ -35,3 +37,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate {
+    func loadInjectionIII() {
+        #if DEBUG
+        Bundle(path: "/Applications/InjectionIII.app/Contents/Resources/iOSInjection.bundle")?.load()
+        #endif
+    }
+}
+
+extension UIViewController {
+    @objc func injected() {
+        view.subviews.forEach { (view) in
+            view.snp.removeConstraints()
+            view.removeFromSuperview()
+        }
+        viewDidLoad()
+        viewWillAppear(true)
+        viewDidAppear(true)
+    }
+}
