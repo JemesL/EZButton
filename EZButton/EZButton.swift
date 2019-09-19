@@ -28,8 +28,8 @@ enum EZButtonAlignemnt {
     case bottomCenter
     case rightCenter
     case center
-    case LeftTop
-    case LeftBottom
+    case leftTop
+    case leftBottom
     case rightTop
     case rightBottom
 }
@@ -183,7 +183,7 @@ extension EZButton {
 // MARK: - 约束布局
 extension EZButton {
     fileprivate func setupViews() {
-        backgroundColor = .white
+        backgroundColor = .lightGray
         bg.backgroundColor = .white
         addSubview(bg)
         
@@ -267,13 +267,10 @@ extension EZButton {
             make.bottom.lessThanOrEqualTo(0).priority(.low)
             if distribution == .leftIconRightTitle {
                 make.size.equalTo(self.imageSize)
-            } else {
-                make.size.equalTo(CGSize(width: self.getTitleWidth(), height: self.getTitleHeight()))
             }
-            
-            if alignemnt == .topCenter || alignemnt == .LeftTop || alignemnt == .rightTop {
+            if alignemnt == .topCenter || alignemnt == .leftTop || alignemnt == .rightTop {
                 make.top.equalTo(right).offset(offset)
-            } else if alignemnt == .bottomCenter || alignemnt == .LeftBottom || alignemnt == .rightBottom {
+            } else if alignemnt == .bottomCenter || alignemnt == .leftBottom || alignemnt == .rightBottom {
                 make.bottom.equalTo(right).offset(offset)
             } else {
                 make.centerY.equalTo(right)
@@ -288,38 +285,8 @@ extension EZButton {
             make.right.equalTo(0)
             if distribution == .leftTitleRightIcon {
                 make.size.equalTo(self.imageSize)
-            } else {
-                make.size.equalTo(CGSize(width: self.getTitleWidth(), height: self.getTitleHeight()))
             }
         }
-//        left.snp.makeConstraints {[weak self] make in
-//            guard let self = self else { return }
-//            make.left.equalTo(edge.left)
-//            make.top.greaterThanOrEqualTo(edge.top)
-//            make.bottom.lessThanOrEqualTo(-edge.bottom)
-//            if distribution == .leftIconRightTitle {
-//                make.size.equalTo(self.imageSize)
-//            }
-//            switch alignemnt {
-//            case .topCenter:
-//                make.top.equalTo(right)
-//            case .bottomCenter:
-//                make.bottom.equalTo(right)
-//            default:
-//                make.centerY.equalToSuperview()
-//            }
-//        }
-//        right.snp.makeConstraints {[weak self] make in
-//            guard let self = self else { return }
-//            make.left.equalTo(left.snp.right).offset(self.space)
-//            make.top.greaterThanOrEqualTo(edge.top)
-//            make.bottom.lessThanOrEqualTo(-edge.bottom)
-//            if distribution == .leftTitleRightIcon {
-//                make.size.equalTo(self.imageSize)
-//            }
-//            make.centerY.equalToSuperview()
-//            make.right.equalTo(-edge.right)
-//        }
     }
     
     fileprivate func updateTopBottomConstraints() {
@@ -338,31 +305,31 @@ extension EZButton {
         guard let top = topView, let bottom = bottomView else { return }
         top.snp.makeConstraints {[weak self] make in
             guard let self = self else { return }
-            make.left.greaterThanOrEqualTo(edge.left)
-            make.right.lessThanOrEqualTo(-edge.right)
-            make.top.equalTo(edge.top)
+            make.left.greaterThanOrEqualTo(0).priority(.low)
+            make.right.lessThanOrEqualTo(0).priority(.low)
+            make.top.equalTo(0)
             if distribution == .topIconBottomTitle {
                 make.size.equalTo(self.imageSize)
             }
+            
             switch alignemnt {
-            case .leftCenter:
-                make.left.equalTo(bottom)
-            case .rightCenter:
-                make.right.equalTo(bottom)
+            case .leftCenter, .leftBottom, .leftTop:
+                make.left.equalTo(bottom).offset(offset)
+            case .rightCenter, .rightBottom, .rightTop:
+                make.right.equalTo(bottom).offset(offset)
             default:
-                make.centerX.equalToSuperview()
+                make.centerX.equalTo(bottom)
             }
         }
         bottom.snp.makeConstraints {[weak self] make in
             guard let self = self else { return }
             make.top.equalTo(top.snp.bottom).offset(self.space)
-            make.left.greaterThanOrEqualTo(edge.left)
-            make.right.lessThanOrEqualTo(-edge.right)
+            make.left.greaterThanOrEqualTo(0).priority(.low)
+            make.right.lessThanOrEqualTo(0).priority(.low)
+            make.bottom.equalTo(0)
             if distribution == .topTitleBottomIcon {
                 make.size.equalTo(self.imageSize)
             }
-            make.centerX.equalToSuperview()
-            make.bottom.equalTo(-edge.bottom)
         }
     }
     
@@ -379,49 +346,55 @@ extension EZButton {
     func updateBGConstraints() {
         bg.snp.removeConstraints()
         bg.snp.makeConstraints { make in
-            let top = make.top.greaterThanOrEqualTo(edge.top).priority(.high).constraint
-            let left = make.left.greaterThanOrEqualTo(edge.left).priority(.high).constraint
-            let right = make.right.lessThanOrEqualTo(-edge.right).priority(.high).constraint
-            let bottom = make.bottom.lessThanOrEqualTo(-edge.bottom).priority(.high).constraint
-            
+            if distribution == .leftIconRightTitle || distribution == .leftTitleRightIcon {
+                let maxHeight = max(getIconHeight(), getTitleHeight())
+                make.height.equalTo(maxHeight)
+            } else {
+                let maxWidth = max(getIconWidth(), getTitleWidth())
+                make.width.equalTo(maxWidth)
+            }
+
             if alignemnt == .topCenter {
-                top.update(priority: ConstraintPriority.medium)
+                setBG(make: make, dirctionArr: (true, false, false, false))
                 make.centerX.equalToSuperview()
             }
             if alignemnt == .leftCenter {
-                left.update(priority: ConstraintPriority.medium)
+                setBG(make: make, dirctionArr: (false, true, false, false))
                 make.centerY.equalToSuperview()
             }
             if alignemnt == .bottomCenter {
-                bottom.update(priority: ConstraintPriority.medium)
+                setBG(make: make, dirctionArr: (false, false, true, false))
                 make.centerX.equalToSuperview()
             }
             if alignemnt == .rightCenter {
-                right.update(priority: ConstraintPriority.high)
+                setBG(make: make, dirctionArr: (false, false, false, true))
                 make.centerY.equalToSuperview()
             }
             if alignemnt == .center {
-                top.update(priority: ConstraintPriority.high)
-                make.centerX.equalToSuperview()
-            }
-            if alignemnt == .LeftTop {
-//                top.update(priority: ConstraintPriority.high)
                 make.centerX.equalToSuperview()
                 make.centerY.equalToSuperview()
             }
-            if alignemnt == .LeftBottom {
-                left.update(priority: ConstraintPriority.high)
-                bottom.update(priority: ConstraintPriority.high)
+            if alignemnt == .leftTop {
+                setBG(make: make, dirctionArr: (true, true, false, false))
+            }
+            if alignemnt == .leftBottom {
+                setBG(make: make, dirctionArr: (false, true, true, false))
             }
             if alignemnt == .rightTop {
-                right.update(priority: ConstraintPriority.high)
-                top.update(priority: ConstraintPriority.high)
+                setBG(make: make, dirctionArr: (true, false, false, true))
             }
             if alignemnt == .rightBottom {
-                right.update(priority: ConstraintPriority.high)
-                bottom.update(priority: ConstraintPriority.high)
+                setBG(make: make, dirctionArr: (false, false, true, true))
             }
+        }
+        
+        func setBG(make: ConstraintMaker, dirctionArr: (Bool, Bool, Bool, Bool)) {
+            let (top, left, bottom, right) = dirctionArr
             
+            let _ = top ? make.top.equalTo(edge.top) : make.top.greaterThanOrEqualTo(edge.top)
+            let _ = left ? make.left.equalTo(edge.left) : make.left.greaterThanOrEqualTo(edge.left)
+            let _ = bottom ? make.bottom.equalTo(-edge.bottom) : make.bottom.lessThanOrEqualTo(-edge.bottom)
+            let _ = right ? make.right.equalTo(-edge.right) : make.right.lessThanOrEqualTo(-edge.right)
         }
 
     }
