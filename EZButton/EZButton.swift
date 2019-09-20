@@ -373,6 +373,7 @@ extension EZButton {
             if alignemnt == .center {
                 make.centerX.equalToSuperview()
                 make.centerY.equalToSuperview()
+                setBG(make: make, dirctionArr: (false, false, false, false))
             }
             if alignemnt == .leftTop {
                 setBG(make: make, dirctionArr: (true, true, false, false))
